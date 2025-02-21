@@ -48,10 +48,10 @@ jobs:
       - name: Build Docker Image
         if: ${{ success() }}
         run: |
-          docker build -t datathinkers/water-potability-predictor:latest .
+          docker build -t fcozer/mlops_project:latest .
  
       # Push the Docker image only if the build step was successful
       - name: Push Docker Image
         if: ${{ success() }}
         run: |
-          docker push datathinkers/water-potability-predictor:latest
+          docker push fcozer/mlops_project:latest
